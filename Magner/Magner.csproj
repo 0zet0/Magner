@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\OpenCvSharp4.runtime.win.4.5.5.20211231\build\netstandard\OpenCvSharp4.runtime.win.props" Condition="Exists('..\packages\OpenCvSharp4.runtime.win.4.5.5.20211231\build\netstandard\OpenCvSharp4.runtime.win.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -12,6 +13,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,9 +35,66 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>free-icon-ocr-5137239.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Controls, Version=2.2.5.0, Culture=neutral, PublicKeyToken=a8ac264d1dc6b9d9, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Controls.2.2.5\lib\AForge.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Imaging, Version=2.2.5.0, Culture=neutral, PublicKeyToken=ba8ddea9676ca48b, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Imaging.2.2.5\lib\AForge.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Math, Version=2.2.5.0, Culture=neutral, PublicKeyToken=abba2e25397ee8c9, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Math.2.2.5\lib\AForge.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=2.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.2.2.3.1\lib\net461\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenCvSharp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6adad1e807fea099, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenCvSharp4.4.5.5.20211231\lib\netstandard2.0\OpenCvSharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.6.0.0\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.6.0.0\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,19 +104,65 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="Tesseract, Version=4.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tesseract.4.1.1\lib\net45\Tesseract.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="VisioForge.Core, Version=15.1.12.0, Culture=neutral, PublicKeyToken=5873e863f1bcda5d, processorArchitecture=MSIL">
+      <HintPath>..\packages\VisioForge.DotNet.Core.TRIAL.15.1.12\lib\net472\VisioForge.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="VisioForge.Libs, Version=15.1.12.0, Culture=neutral, PublicKeyToken=2ff49422ec313cd3, processorArchitecture=MSIL">
+      <HintPath>..\packages\VisioForge.DotNet.Core.TRIAL.15.1.12\lib\net472\VisioForge.Libs.dll</HintPath>
+    </Reference>
+    <Reference Include="VisioForge.MediaFramework, Version=15.1.12.0, Culture=neutral, PublicKeyToken=14e66dd726c53f11, processorArchitecture=MSIL">
+      <HintPath>..\packages\VisioForge.DotNet.Core.TRIAL.15.1.12\lib\net472\VisioForge.MediaFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="VisioForge.Types, Version=15.1.12.0, Culture=neutral, PublicKeyToken=722de1c1c0a7f49e, processorArchitecture=MSIL">
+      <HintPath>..\packages\VisioForge.DotNet.Core.TRIAL.15.1.12\lib\net472\VisioForge.Types.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="ClearImage.cs" />
+    <Compile Include="DocType.cs" />
+    <Compile Include="DSBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DSBox.Designer.cs">
+      <DependentUpon>DSBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormHome.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormHome.Designer.cs">
       <DependentUpon>FormHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cropper.cs" />
+    <Compile Include="FormRecognize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRecognize.Designer.cs">
+      <DependentUpon>FormRecognize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImageViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImageViewer.Designer.cs">
+      <DependentUpon>ImageViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalData.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DSBox.resx">
+      <DependentUpon>DSBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormHome.resx">
       <DependentUpon>FormHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRecognize.resx">
+      <DependentUpon>FormRecognize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageViewer.resx">
+      <DependentUpon>ImageViewer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -66,7 +172,9 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -80,5 +188,57 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\openImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\openImagebb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\openImage1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\188903.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CloseWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rectangle 27.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rbNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rbLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="free-icon-ocr-5137239.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\OpenCvSharp4.runtime.win.4.5.5.20211231\build\netstandard\OpenCvSharp4.runtime.win.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\OpenCvSharp4.runtime.win.4.5.5.20211231\build\netstandard\OpenCvSharp4.runtime.win.props'))" />
+    <Error Condition="!Exists('..\packages\Tesseract.4.1.1\build\Tesseract.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Tesseract.4.1.1\build\Tesseract.targets'))" />
+    <Error Condition="!Exists('..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets'))" />
+  </Target>
+  <Import Project="..\packages\Tesseract.4.1.1\build\Tesseract.targets" Condition="Exists('..\packages\Tesseract.4.1.1\build\Tesseract.targets')" />
+  <Import Project="..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets" Condition="Exists('..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets')" />
 </Project>
